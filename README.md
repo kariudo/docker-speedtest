@@ -46,7 +46,7 @@ Read the [official docs](https://hub.docker.com/_/influxdb) for further environm
 ### Speedtest
 Image is based on Alpine Linux and available via [Docker Hub](https://hub.docker.com/r/kariudo/speedtest/) as `kariudo/speedtest`.
 
-It gets built through [GitHub Actions](https://github.com/features/actions) from [this Dockerfile](Dockerfile).
+It gets built through through Docker Hub from [this Dockerfile](Dockerfile).
 
 If, for whatever reason, the speed test fails or gets aborted - in case there has been no response received within 5 minutes -
 the script will classify that as "no internet connection is available". In this case, the script will store 0 Mbit/s for 
