@@ -1,12 +1,10 @@
 FROM alpine:3
 
-RUN apk add --no-cache wget curl \
-    && wget -O speedtest-cli.tgz https://bintray.com/ookla/download/download_file?file_path=ookla-speedtest-1.0.0-arm-linux.tgz \
-    && tar zxvf speedtest-cli.tgz \
-    && rm speedtest-cli.tgz \
-    && mv speedtest* /usr/bin/
+RUN apk add --update --no-cache py-pip curl bash
+RUN pip install --upgrade pip
+RUN pip install speedtest-cli --upgrade
 
- HEALTHCHECK --interval=5m --timeout=5s --retries=1 \
+HEALTHCHECK --interval=5m --timeout=5s --retries=1 \
     CMD ./healthcheck.sh
 
 WORKDIR /opt/speedtest
