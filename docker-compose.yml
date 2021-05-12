@@ -28,7 +28,7 @@ services:
       - influxdb
 
   speedtest:
-    image: sthuber90/speedtest
+    image: kariudo/speedtest
     container_name: speedtest
     restart: unless-stopped
     dns:
