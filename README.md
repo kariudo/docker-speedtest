@@ -1,23 +1,19 @@
 # Internet Speedtest with Docker
 
-![docker-publish](https://github.com/sthuber90/docker-speedtest/workflows/docker-publish/badge.svg)
+![docker-publish](https://github.com/kariudo/docker-speedtest/workflows/docker-publish/badge.svg)
 
 > Run [Ookla's speedtest CLI](https://www.speedtest.net/de/apps/cli) to regularly test your local internet connection 
-> from a [Docker](https://docs.docker.com/) ARMv7 compatible container.
+> from a [Docker](https://docs.docker.com/) container.
 > The results of the speed test are intended to be forwarded to an [InfluxDB](https://docs.influxdata.com/) and visualized
 > in a [Chronograf](https://docs.influxdata.com/chronograf) dashboard.
 
-This project is inspired and based on [thinkonezero/docker-speedtest](https://gitlab.com/phikai/docker-speedtest).
-Thank you very much for the work you put in, paving the way for this project.
-
 ## Prerequisites
 * Docker
-* ARMv7 based machine, i.e. RaspberryPi
 
 ## Usage
 ![Dashboard](docs/img/dashboard.png)
 
-1. `git clone git@github.com:sthuber90/docker-speedtest.git`
+1. `git clone git@github.com:kariudo/docker-speedtest.git`
 2. `docker-compose up -d`
 3. Open Chronograf http://localhost:8888
 4. Import dashboard
@@ -50,7 +46,7 @@ the Chronograf UI.
 Read the [official docs](https://hub.docker.com/_/influxdb) for further environment variables available
 
 ### Speedtest
-Image is based on Alpine Linux and available via [Docker Hub](https://hub.docker.com/r/sthuber90/speedtest/) as `sthuber90/speedtest`.
+Image is based on Alpine Linux and available via [Docker Hub](https://hub.docker.com/r/kariudo/speedtest/) as `kariudo/speedtest`.
 
 It gets built through [GitHub Actions](https://github.com/features/actions) from [this Dockerfile](Dockerfile).
 
