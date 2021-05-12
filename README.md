@@ -1,7 +1,5 @@
 # Internet Speedtest with Docker
 
-![docker-publish](https://github.com/kariudo/docker-speedtest/workflows/docker-publish/badge.svg)
-
 > Run [Ookla's speedtest CLI](https://www.speedtest.net/de/apps/cli) to regularly test your local internet connection 
 > from a [Docker](https://docs.docker.com/) container.
 > The results of the speed test are intended to be forwarded to an [InfluxDB](https://docs.influxdata.com/) and visualized
