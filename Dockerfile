@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:20.10
 
 RUN apt-get -y update
 RUN apt-get -y curl bash
