@@ -1,8 +1,9 @@
 FROM ubuntu:21.04
 
-RUN apk add --update --no-cache curl bash
+RUN apt-get -y update
+RUN apt-get -y curl bash
 RUN curl -s https://install.speedtest.net/app/cli/install.deb.sh | bash
-RUN apt-get install speedtest
+RUN apt-get -y install speedtest
 
 HEALTHCHECK --interval=5m --timeout=5s --retries=1 \
     CMD ./healthcheck.sh
