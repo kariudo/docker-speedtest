@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM ubuntu:21.04
 
 RUN apk add --update --no-cache curl bash
 RUN curl -s https://install.speedtest.net/app/cli/install.deb.sh | bash
