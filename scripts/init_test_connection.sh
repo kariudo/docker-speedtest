@@ -27,11 +27,13 @@ do
 		PL_RESP_CODE=$(curl --silent --show-error --write-out "%{http_code}" -XPOST "http://influxdb:8086/write?db=$DATABASE" --data-binary "packet_loss,host=local value=100")
 		echo "Packet Loss (100 %) send returned with $PL_RESP_CODE"
 	else
-		DOWNLOAD=$(cat < $FILE | grep "Download:" | awk -F " " '{print $2}')
-		UPLOAD=$(cat $FILE | grep "Upload:" | awk -F " " '{print $2}')
-		PACKET_LOSS=$(cat $FILE | grep "Packet Loss:" | awk -F " " '{print $3}' | awk -F "%" '{print $1}')
-		LATENCY=$(cat $FILE | grep "Latency:" | awk -F " " '{print $2}')
-		JITTER=$(cat $FILE | grep "Latency:" | awk -F " " '{print $4}' | awk -F "(" '{print $2}')
+                DOWNLOAD=$(cat < $FILE | grep "Download:" | awk -F " " '{print $3}')
+                UPLOAD=$(cat $FILE | grep "Upload:" | awk -F " " '{print $3}')
+                PACKET_LOSS=$(cat $FILE | grep "Packet Loss:" | awk -F " " '{print $3}' | awk -F "%" '{print $1}')
+                LATENCY=$(cat $FILE | grep "Latency:" | awk -F " " '{print $2}')
+                JITTER=$(cat $FILE | grep "Latency:" | awk -F " " '{print $4}' | awk -F "(" '{print $2}')
+
+                if [ $PACKET_LOSS==Not ]; then PACKET_LOSS=0; fi
 
 		echo "Download: $DOWNLOAD"
 		echo "Upload: $UPLOAD"
