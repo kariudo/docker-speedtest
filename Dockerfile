@@ -1,8 +1,8 @@
-FROM alpine:3
+FROM alpine:latest
 
-RUN apk add --update --no-cache py-pip curl bash
-RUN pip install --upgrade pip
-RUN pip install speedtest-cli --upgrade
+RUN apk add --update --no-cache curl bash
+RUN curl -s https://install.speedtest.net/app/cli/install.deb.sh | bash
+RUN apt-get install speedtest
 
 HEALTHCHECK --interval=5m --timeout=5s --retries=1 \
     CMD ./healthcheck.sh
