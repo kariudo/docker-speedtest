@@ -8,8 +8,8 @@ do
 	TIMESTAMP=$(date "+%s")
 
 	echo "Run speedtest ..."
-	# timeout and exit with 143 if speed test is not done within 300 seconds (5 minutes)
-	timeout 300 speedtest --accept-license --accept-gdpr -u Mbps > $FILE
+	# timeout and exit with 143 if speed test is not done within 300 seconds (5 minutes), no progress
+	timeout 300 speedtest --accept-license --accept-gdpr -u Mbps -p no > $FILE
 
 	EXIT_CODE=$?
 	echo "Speedtest exited with $EXIT_CODE"
