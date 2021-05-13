@@ -9,10 +9,10 @@
 		}
 	},
 	"dashboard": {
-		"id": "1",
+		"id": "3",
 		"cells": [
 			{
-				"i": "90808bfc-9dad-40aa-b313-8080a3962a28",
+				"i": "555389f6-c0b9-4c19-b15f-08d2450c72f0",
 				"x": 6,
 				"y": 4,
 				"w": 6,
@@ -50,7 +50,7 @@
 							"range": null,
 							"shifts": null
 						},
-						"source": "",
+						"source": "/chronograf/v1/sources/0",
 						"type": "influxql"
 					}
 				],
@@ -89,27 +89,27 @@
 						"scale": "linear"
 					}
 				},
-				"type": "line-plus-single-stat",
+				"type": "line-stepplot",
 				"colors": [
 					{
-						"id": "base",
+						"id": "984e640a-a247-4024-9a24-d96115d47a63",
 						"type": "scale",
-						"hex": "#31C0F6",
-						"name": "Nineteen Eighty Four",
+						"hex": "#FDC44F",
+						"name": "Cthulhu",
 						"value": "0"
 					},
 					{
-						"id": "e23395f0-b782-4d6f-97fc-8df59b10cb1a",
+						"id": "31c4b25f-cb84-4450-a05a-531dcb538a8a",
 						"type": "scale",
-						"hex": "#A500A5",
-						"name": "Nineteen Eighty Four",
+						"hex": "#007C76",
+						"name": "Cthulhu",
 						"value": "0"
 					},
 					{
-						"id": "6f87ad58-3366-4c80-ab6b-db0cda118d22",
+						"id": "ee3f3800-bd5f-44ab-9751-d654b5ae3e2d",
 						"type": "scale",
-						"hex": "#FF7E27",
-						"name": "Nineteen Eighty Four",
+						"hex": "#8983FF",
+						"name": "Cthulhu",
 						"value": "0"
 					}
 				],
@@ -139,11 +139,11 @@
 				"note": "",
 				"noteVisibility": "default",
 				"links": {
-					"self": "/chronograf/v1/dashboards/1/cells/90808bfc-9dad-40aa-b313-8080a3962a28"
+					"self": "/chronograf/v1/dashboards/3/cells/555389f6-c0b9-4c19-b15f-08d2450c72f0"
 				}
 			},
 			{
-				"i": "c6b85729-a151-41a5-be8c-5b8bf0cb38b4",
+				"i": "54e20a41-b48e-49d5-ac30-d474eb9c183f",
 				"x": 0,
 				"y": 4,
 				"w": 6,
@@ -181,7 +181,7 @@
 							"range": null,
 							"shifts": null
 						},
-						"source": "",
+						"source": "/chronograf/v1/sources/0",
 						"type": "influxql"
 					},
 					{
@@ -215,7 +215,7 @@
 							"range": null,
 							"shifts": null
 						},
-						"source": "",
+						"source": "/chronograf/v1/sources/0",
 						"type": "influxql"
 					}
 				],
@@ -254,27 +254,27 @@
 						"scale": "linear"
 					}
 				},
-				"type": "line-plus-single-stat",
+				"type": "line-stepplot",
 				"colors": [
 					{
-						"id": "base",
+						"id": "dea76dd7-a684-4396-99d3-ca60f440cfa1",
 						"type": "scale",
-						"hex": "#31C0F6",
-						"name": "Nineteen Eighty Four",
+						"hex": "#DA6FF1",
+						"name": "Ectoplasm",
 						"value": "0"
 					},
 					{
-						"id": "816a941d-51a0-41da-a3e9-d9e6d4fc0621",
+						"id": "802bfeb3-b847-4bc3-87b4-ccd26f7c2069",
 						"type": "scale",
-						"hex": "#A500A5",
-						"name": "Nineteen Eighty Four",
+						"hex": "#00717A",
+						"name": "Ectoplasm",
 						"value": "0"
 					},
 					{
-						"id": "97a9ea98-a89e-4c62-857a-da563cc1307f",
+						"id": "6ecbcbfa-05d0-4c46-8216-742bb693d5a0",
 						"type": "scale",
-						"hex": "#FF7E27",
-						"name": "Nineteen Eighty Four",
+						"hex": "#ACFF76",
+						"name": "Ectoplasm",
 						"value": "0"
 					}
 				],
@@ -309,11 +309,11 @@
 				"note": "",
 				"noteVisibility": "default",
 				"links": {
-					"self": "/chronograf/v1/dashboards/1/cells/c6b85729-a151-41a5-be8c-5b8bf0cb38b4"
+					"self": "/chronograf/v1/dashboards/3/cells/54e20a41-b48e-49d5-ac30-d474eb9c183f"
 				}
 			},
 			{
-				"i": "f8b37fbe-972f-4ab2-9a29-152501b74a9d",
+				"i": "177cfafb-bb62-4e2a-a3db-a0df6ba2fe20",
 				"x": 6,
 				"y": 0,
 				"w": 6,
@@ -351,7 +351,7 @@
 							"range": null,
 							"shifts": null
 						},
-						"source": "",
+						"source": "/chronograf/v1/sources/0",
 						"type": "influxql"
 					}
 				],
@@ -369,13 +369,13 @@
 					},
 					"y": {
 						"bounds": [
-							"0",
-							"3"
+							"",
+							""
 						],
 						"label": "upload",
 						"prefix": "",
-						"suffix": " Mbit/s",
-						"base": "raw",
+						"suffix": "Mbps",
+						"base": "10",
 						"scale": "linear"
 					},
 					"y2": {
@@ -393,31 +393,28 @@
 				"type": "line-stepplot",
 				"colors": [
 					{
-						"id": "39c3794d-7a9b-45a0-ae94-57bfc1582383",
+						"id": "cfec503a-d082-43c5-93b1-f238ed85f7a0",
 						"type": "scale",
-						"hex": "#31C0F6",
-						"name": "Nineteen Eighty Four",
+						"hex": "#FD7A5D",
+						"name": "Delorean",
 						"value": "0"
 					},
 					{
-						"id": "f8b4d13b-eaf8-47c5-b649-2bbbbf0a7baa",
+						"id": "28801f2f-717c-4c36-bcf4-3188fdf92342",
 						"type": "scale",
-						"hex": "#A500A5",
-						"name": "Nineteen Eighty Four",
+						"hex": "#5F1CF2",
+						"name": "Delorean",
 						"value": "0"
 					},
 					{
-						"id": "f47a3d07-4932-4ebf-8f2c-08d1f0d829f2",
+						"id": "911334f9-a6f5-41c7-85fd-379d99670edb",
 						"type": "scale",
-						"hex": "#FF7E27",
-						"name": "Nineteen Eighty Four",
+						"hex": "#4CE09A",
+						"name": "Delorean",
 						"value": "0"
 					}
 				],
-				"legend": {
-					"type": "static",
-					"orientation": "bottom"
-				},
+				"legend": {},
 				"tableOptions": {
 					"verticalTimeAxis": true,
 					"sortBy": {
@@ -443,11 +440,11 @@
 				"note": "",
 				"noteVisibility": "default",
 				"links": {
-					"self": "/chronograf/v1/dashboards/1/cells/f8b37fbe-972f-4ab2-9a29-152501b74a9d"
+					"self": "/chronograf/v1/dashboards/3/cells/177cfafb-bb62-4e2a-a3db-a0df6ba2fe20"
 				}
 			},
 			{
-				"i": "5bf9658e-57ab-4050-9668-4157619f6644",
+				"i": "a844bc1a-2853-4e60-a8e2-1494e2a7d8bb",
 				"x": 0,
 				"y": 0,
 				"w": 6,
@@ -489,7 +486,7 @@
 							"range": null,
 							"shifts": null
 						},
-						"source": "",
+						"source": "/chronograf/v1/sources/0",
 						"type": "influxql"
 					}
 				],
@@ -507,12 +504,12 @@
 					},
 					"y": {
 						"bounds": [
-							"0",
-							"55"
+							"",
+							""
 						],
 						"label": "download",
 						"prefix": "",
-						"suffix": " Mbit/s",
+						"suffix": "Mbps",
 						"base": "10",
 						"scale": "linear"
 					},
@@ -531,31 +528,28 @@
 				"type": "line-stepplot",
 				"colors": [
 					{
-						"id": "39c3794d-7a9b-45a0-ae94-57bfc1582383",
+						"id": "1c61eee6-b682-4a24-b091-2735693b3117",
 						"type": "scale",
 						"hex": "#31C0F6",
 						"name": "Nineteen Eighty Four",
 						"value": "0"
 					},
 					{
-						"id": "f8b4d13b-eaf8-47c5-b649-2bbbbf0a7baa",
+						"id": "ee8f4c43-8b2e-4dd0-8f67-c837d1d0235d",
 						"type": "scale",
 						"hex": "#A500A5",
 						"name": "Nineteen Eighty Four",
 						"value": "0"
 					},
 					{
-						"id": "f47a3d07-4932-4ebf-8f2c-08d1f0d829f2",
+						"id": "f0a98945-efdf-4fdc-91d4-8259377472e7",
 						"type": "scale",
 						"hex": "#FF7E27",
 						"name": "Nineteen Eighty Four",
 						"value": "0"
 					}
 				],
-				"legend": {
-					"type": "static",
-					"orientation": "bottom"
-				},
+				"legend": {},
 				"tableOptions": {
 					"verticalTimeAxis": true,
 					"sortBy": {
@@ -586,7 +580,7 @@
 				"note": "",
 				"noteVisibility": "default",
 				"links": {
-					"self": "/chronograf/v1/dashboards/1/cells/5bf9658e-57ab-4050-9668-4157619f6644"
+					"self": "/chronograf/v1/dashboards/3/cells/a844bc1a-2853-4e60-a8e2-1494e2a7d8bb"
 				}
 			}
 		],
@@ -594,9 +588,9 @@
 		"name": "Internet Speedtest",
 		"organization": "default",
 		"links": {
-			"self": "/chronograf/v1/dashboards/1",
-			"cells": "/chronograf/v1/dashboards/1/cells",
-			"templates": "/chronograf/v1/dashboards/1/templates"
+			"self": "/chronograf/v1/dashboards/3",
+			"cells": "/chronograf/v1/dashboards/3/cells",
+			"templates": "/chronograf/v1/dashboards/3/templates"
 		}
 	}
 }
