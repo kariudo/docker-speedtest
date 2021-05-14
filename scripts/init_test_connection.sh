@@ -2,17 +2,24 @@
 FILE="/opt/speedtest/test_connection.log"
 INTERVAL=${TEST_INTERVAL:-900}
 DATABASE="${INFLUXDB_DB:-speedtest}"
+SERVER="${SERVER_ID:0}"
 
 while true
 do
 	TIMESTAMP=$(date "+%s")
-
-	echo "Run speedtest ..."
+	echo "Running speedtest ..."
+	
 	# timeout and exit with 143 if speed test is not done within 300 seconds (5 minutes), no progress
-	timeout 300 speedtest --accept-license --accept-gdpr -u Mbps -p no > $FILE
+	if [ $SERVER -ne 0 ]; then
+		# if a server ID was specified, then we will use that, otherwise auto select
+		timeout 300 speedtest --accept-license --accept-gdpr -u Mbps -p no -s $SERVER > $FILE
+	else
+		timeout 300 speedtest --accept-license --accept-gdpr -u Mbps -p no > $FILE
+	fi
 
 	EXIT_CODE=$?
 	echo "Speedtest exited with $EXIT_CODE"
+	
 	# if exit code of speed test command is not 0 the speed test failed and it's save to assume that no internet connection exits
 	if [ $EXIT_CODE -ne 0 ]
 	then
