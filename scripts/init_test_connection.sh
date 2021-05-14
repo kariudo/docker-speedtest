@@ -12,6 +12,7 @@ do
 	# timeout and exit with 143 if speed test is not done within 300 seconds (5 minutes), no progress
 	if [ $SERVER -ne 0 ]; then
 		# if a server ID was specified, then we will use that, otherwise auto select
+		echo "Using server ID: $SERVER"
 		timeout 300 speedtest --accept-license --accept-gdpr -u Mbps -p no -s $SERVER > $FILE
 	else
 		timeout 300 speedtest --accept-license --accept-gdpr -u Mbps -p no > $FILE
