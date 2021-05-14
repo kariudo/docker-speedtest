@@ -4,6 +4,9 @@ INTERVAL=${TEST_INTERVAL:-900}
 DATABASE="${INFLUXDB_DB:-speedtest}"
 SERVER=${SERVER_ID:-0}
 
+# start the ping tests
+sh ./init_ping_test.sh &
+
 while true
 do
 	TIMESTAMP=$(date "+%s")
