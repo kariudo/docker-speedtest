@@ -9,7 +9,7 @@
 * Docker
 
 ## Usage
-![Dashboard](docs/img/dashboard.png)
+![Dashboard](https://github.com/kariudo/docker-speedtest/raw/master/docs/img/dashboard.png)
 
 1. `git clone git@github.com:kariudo/docker-speedtest.git`
 2. `docker-compose up -d`
@@ -64,8 +64,8 @@ Contributions are welcome. Please follow these steps:
 1. Fork this repository 
 1. Create a branch: `git checkout -b <branch_name>. 
 1. Make your changes and commit them: `git commit -m '<commit_message>'`
-1. Push to the original branch: `git push origin <project_name>/<location>
-1. Create the pull request.`
+1. Push to the original branch: `git push origin <project_name>/<location>`
+1. Create the pull request.
 
 ## ⚠️ Disclaimer
 The results of the speed test will vary, depending on what else is going on in your network. Such as other downloads, uploads, 
