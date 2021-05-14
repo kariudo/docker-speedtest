@@ -1,7 +1,7 @@
 FROM ubuntu:20.10
 
 RUN apt-get -y update
-RUN apt-get -y install curl bash
+RUN apt-get -y install curl bash iputils-ping
 RUN curl -s https://install.speedtest.net/app/cli/install.deb.sh | bash
 RUN apt-get -y install speedtest
 
