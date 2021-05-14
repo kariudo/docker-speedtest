@@ -56,6 +56,7 @@ the download and upload speed and 100% packet loss in the InfluxDB. For latency 
 |-----------|---------|----------|
 | INFLUXDB_DB| speedtest | Database table to store the speed test results in. MUST be the same table name provided to the InfluxDB container. |
 | TEST_INTERVAL | 900 | Time in seconds until the speed test script is run again. Default is 15 minutes. May not be smaller than 5 minutes. |
+| SERVER_ID | | Server ID to use for tests, if not provided, server is auto-selected. |
 
 ## Contribution
 Contributions are welcome. Please follow these steps:
