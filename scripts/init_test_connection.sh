@@ -2,7 +2,7 @@
 FILE="/opt/speedtest/test_connection.log"
 INTERVAL=${TEST_INTERVAL:-900}
 DATABASE="${INFLUXDB_DB:-speedtest}"
-SERVER="${SERVER_ID:0}"
+SERVER=${SERVER_ID:-0}
 
 while true
 do
