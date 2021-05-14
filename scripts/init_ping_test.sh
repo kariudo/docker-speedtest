@@ -16,6 +16,7 @@ do
                 PING_RESP_CODE=$(curl --silent --show-error --write-out "%{http_code}" -XPOST "http://influxdb:8086/write?db=$DATABASE" --data-binary "ping,host=local value=0")
                 echo "Ping failure send returned with $PING_RESP_CODE"
         else
+                PING_RES=${PING_RES:-0}
                 echo "Ping: $PING_RES"
                 PING_RESP_CODE=$(curl --silent --show-error --write-out "%{http_code}" -XPOST "http://influxdb:8086/write?db=$DATABASE" --data-binary "ping,host=local value=$PING_RES")
                 echo "Ping ($PING_RES ms) send returned with $PING_RESP_CODE"
